@@ -182,7 +182,7 @@ MonoBehaviour:
   - {fileID: 1729068620516768205}
   - {fileID: 5018898389584715606}
   aktuellerPunkt: 0
-  geschwindigkeit: 2
+  geschwindigkeit: 5.19
 --- !u!50 &4219118337282825621
 Rigidbody2D:
   serializedVersion: 4

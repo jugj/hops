@@ -20,12 +20,12 @@ public class BewegendePlattform : MonoBehaviour
         //bewege zum aktuellen zielpunkt
         transform.position = Vector2.MoveTowards(transform.position, zielPunkte[aktuellerPunkt].position, geschwindigkeit * Time.deltaTime);
 
-        //Wenn wir beim Zielpunkt sind, wähle den nächsten in der Liste
+        //Wenn wir beim Zielpunkt sind, wï¿½hle den nï¿½chsten in der Liste
         if (Vector2.Distance(transform.position, zielPunkte[aktuellerPunkt].position) <0.02f)
         {
             aktuellerPunkt += 1;
 
-            //Wenn das der letzte war, gehe zurück zum ersten:
+            //Wenn das der letzte war, gehe zurï¿½ck zum ersten:
             if (aktuellerPunkt >= zielPunkte.Length)
             {
                 aktuellerPunkt = 0;
