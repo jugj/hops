@@ -28,6 +28,7 @@ public class Spieler : MonoBehaviour
     {
         animator.SetBool("isWalkingRight", false);
         animator.SetBool("isWalkingLeft", false);
+        animator.SetBool("ishostile",false);
  
         if (rigidbody.velocity.y == 0.0f){
             istInDerLuft = false;
@@ -57,6 +58,12 @@ public class Spieler : MonoBehaviour
            bewegungsvektor = bewegungsvektor + Vector2.left*Geschwindigkeit;
            animator.SetBool("isWalkingRight", true);
         }
+
+        if (Input.GetKey("f"))
+        {
+            animator.SetBool("ishostile", true);
+        }
+
     }
     void FixedUpdate(){
         rigidbody.AddForce(bewegungsvektor, ForceMode2D.Impulse);
