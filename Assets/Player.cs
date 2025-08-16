@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spieler : MonoBehaviour
+public class Player : MonoBehaviour
 {
     
     public float Geschwindigkeit = 3f;
-    public float Sprungkraft = 3f;
+    public float Sprungkraft = 12f;
     public Rigidbody2D rigidbody;
     public Animator animator;
 
@@ -42,7 +42,7 @@ public class Spieler : MonoBehaviour
             
         
         bewegungsvektor = new Vector2(0,0);
-        if (Input.GetKey("space") && !istInDerLuft)
+        if (Input.GetKey("w") && !istInDerLuft)
         {
           bewegungsvektor = bewegungsvektor + Vector2.up*Sprungkraft;
           animator.SetBool("isjumping", true);
@@ -58,14 +58,29 @@ public class Spieler : MonoBehaviour
         if (Input.GetKey("a"))
         {
            bewegungsvektor = bewegungsvektor + Vector2.left*Geschwindigkeit;
-           animator.SetBool("isWalkingRight", true);
+           animator.SetBool("isWalkingLeft", true);
         }
 
-        if (Input.GetKey("f"))
+        if (Input.GetMouseButtonDown(1))
         {
             animator.SetBool("ishostile", true);
+            Angreifen();
         }
 
+        if (Input.GetKeyDown("s"))
+        {
+            Blocken();
+        }
+
+        if (Input.GetKeyDown("e"))
+        {
+            Interagieren();
+        }
+
+    }
+
+    void FixedUpdate(){
+        rigidbody.AddForce(bewegungsvektor, ForceMode2D.Impulse);
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
@@ -73,19 +88,21 @@ public class Spieler : MonoBehaviour
          Destroy(other.gameObject);
 
         }
-
-   
-
-
     }
 
-
-
-
-    void FixedUpdate(){
-        rigidbody.AddForce(bewegungsvektor, ForceMode2D.Impulse);
+    void Interagieren()
+    {
+        Debug.Log("Spieler interagiert!");
     }
 
-
+    void Blocken()
+    {
+        Debug.Log("Spieler blockt!");
+    }
+    
+    void Angreifen()
+    {
+        Debug.Log("Spieler greift an!");
+    }
 
 }
