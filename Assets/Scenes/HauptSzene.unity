@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Geschwindigkeit: 1
-  Sprungkraft: 3
+  Sprungkraft: 6
   rigidbody: {fileID: 645521479}
   animator: {fileID: 645521483}
 --- !u!50 &645521479

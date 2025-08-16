@@ -28,7 +28,8 @@ public class Spieler : MonoBehaviour
     {
         animator.SetBool("isWalkingRight", false);
         animator.SetBool("isWalkingLeft", false);
-        animator.SetBool("ishostile",false);
+        animator.SetBool("ishostile", false);
+        animator.SetBool("isjumping", false);
  
         if (rigidbody.velocity.y == 0.0f){
             istInDerLuft = false;
@@ -44,6 +45,7 @@ public class Spieler : MonoBehaviour
         if (Input.GetKey("space") && !istInDerLuft)
         {
           bewegungsvektor = bewegungsvektor + Vector2.up*Sprungkraft;
+          animator.SetBool("isjumping", true);
         }
 
 
