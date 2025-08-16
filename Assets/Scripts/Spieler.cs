@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spieler : MonoBehaviour
 {
@@ -21,16 +22,27 @@ public class Spieler : MonoBehaviour
 
     bool IstInDerLuft = false;
 
+    public GameObject gameOverScreen;
+    private bool isGameOver = false;
+
     // Start is called before the first frame update
     void Start()
     {
         jetztLeben = maxLeben;
         lebensanzeige.SetzeMaxLeben(maxLeben);
+
+        gameOverScreen.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (jetztLeben <= 0 && !isGameOver)
+        {
+            GameOver();
+        }
+        
         if(rigidbody.velocity.y == 0.0f)
         {
             IstInDerLuft = false;
@@ -73,7 +85,7 @@ public class Spieler : MonoBehaviour
             Blocken();
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             Angreifen();
         }
@@ -97,5 +109,24 @@ public class Spieler : MonoBehaviour
     void Angreifen()
     {
         Debug.Log("Spieler greift an!");
+    }
+
+    void GameOver()
+    {
+        isGameOver = true;
+        Time.timeScale = 0f;
+        gameOverScreen.SetActive(true);
+        Debug.Log("Game Over!");
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
