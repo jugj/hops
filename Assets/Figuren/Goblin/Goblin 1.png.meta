@@ -118,14 +118,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49caf5cd532325f4392c5b6f299934d9
-      internalID: 1822677380
+      spriteID: bc5a781a9c349f24bbce1b9aa8d67698
+      internalID: 918940027
       vertices: []
       indices: 
       edges: []
@@ -139,14 +139,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d86ec42014608b4286e4ca10d885901
-      internalID: 32220766
+      spriteID: 6e897e4f766ed3942bd99e4d83066b33
+      internalID: -53899549
       vertices: []
       indices: 
       edges: []
@@ -162,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Goblin 1_0: 1822677380
-      Goblin 1_1: 32220766
+      Goblin 1_0: 918940027
+      Goblin 1_1: -53899549
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e0bdb7b58c4551c488e6cb05ddff560b
+guid: 8ee2e5da8e8004a4391d9a99f4c6051b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: goblin_0
+      name: spin_coin_big_upscale_strip6_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 33
-        width: 17
-        height: 28
+        x: 0
+        y: 0
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 082881828a8a00c4396fef05b7400897
-      internalID: -1657387996
+      spriteID: 505fd5520ddbc7b4a8b0af4ae12bd4db
+      internalID: 1755492213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goblin_1
+      name: spin_coin_big_upscale_strip6_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 34
-        width: 17
-        height: 28
+        x: 18
+        y: 0
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 575e26dc4c5eb584187d452736db06f8
-      internalID: 279076627
+      spriteID: 5e64864776320ec4bb00ea44fe9a304a
+      internalID: 553966046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goblin_2
+      name: spin_coin_big_upscale_strip6_2
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1
-        width: 17
-        height: 28
+        x: 36
+        y: 0
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b10eb5b1dcd315841b9dc1f9c48f20a0
-      internalID: -663370925
+      spriteID: 713a233500614f345addb076d9d24550
+      internalID: 63640479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goblin_3
+      name: spin_coin_big_upscale_strip6_3
       rect:
         serializedVersion: 2
-        x: 40
-        y: 2
-        width: 17
-        height: 28
+        x: 54
+        y: 0
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4065efe93c2a35542b2c88e22178957b
-      internalID: -1619646729
+      spriteID: 82d2142033bf800479cffb4fb7ff2922
+      internalID: 1363737011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spin_coin_big_upscale_strip6_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628a901b8dd99014192a20950843221b
+      internalID: 2138130531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spin_coin_big_upscale_strip6_5
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6767add436977c04aa69913f1c02269d
+      internalID: 77539830
       vertices: []
       indices: 
       edges: []
@@ -204,10 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      goblin_0: -1657387996
-      goblin_1: 279076627
-      goblin_2: -663370925
-      goblin_3: -1619646729
+      spin_coin_big_upscale_strip6_0: 1755492213
+      spin_coin_big_upscale_strip6_1: 553966046
+      spin_coin_big_upscale_strip6_2: 63640479
+      spin_coin_big_upscale_strip6_3: 1363737011
+      spin_coin_big_upscale_strip6_4: 2138130531
+      spin_coin_big_upscale_strip6_5: 77539830
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
