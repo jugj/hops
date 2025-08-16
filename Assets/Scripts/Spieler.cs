@@ -31,9 +31,11 @@ public class Spieler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(rigidbody.velocity.y == 0.0f){
+        if(rigidbody.velocity.y == 0.0f)
+        {
             IstInDerLuft = false;
-        }else{
+        }
+        else{
             IstInDerLuft = true;
         }
 
@@ -55,9 +57,25 @@ public class Spieler : MonoBehaviour
             bewegungsvektor = bewegungsvektor + Vector2.left * Geschwindigkeit;
         }
 
-        if (Input.GetKeyDown("s")){
+        if (Input.GetKeyDown("o"))
+        {
             jetztLeben -= 1;
             lebensanzeige.SetzeLeben(jetztLeben);
+        }
+
+        if (Input.GetKeyDown("e"))
+        {
+            Interagieren();
+        }
+
+        if (Input.GetKeyDown("s"))
+        {
+            Blocken();
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Angreifen();
         }
     }
 
@@ -66,4 +84,18 @@ public class Spieler : MonoBehaviour
         rigidbody.AddForce(bewegungsvektor, ForceMode2D.Impulse);
     }
 
+    void Interagieren()
+    {
+        Debug.Log("Spieler interagiert!");
+    }
+
+    void Blocken()
+    {
+        Debug.Log("Spieler blockt!");
+    }
+    
+    void Angreifen()
+    {
+        Debug.Log("Spieler greift an!");
+    }
 }
