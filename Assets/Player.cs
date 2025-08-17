@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Spieler : MonoBehaviour
+public class Player : MonoBehaviour
 {
    
    //Bewegung
