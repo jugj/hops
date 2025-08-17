@@ -10,6 +10,7 @@ public class Damage : MonoBehaviour
     {
         if (collision.CompareTag("Hinderniss"))
         {
+            Debug.Log("Leben auf 0 gesetzt!");
             gameManager.jetztLeben = 0;
         }
     }

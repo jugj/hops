@@ -50,8 +50,10 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
+        Debug.Log("Restart-Button pressed!");
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
 
     public void QuitGame()

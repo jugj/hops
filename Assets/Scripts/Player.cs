@@ -28,7 +28,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(transform.position);
         animator.SetBool("isWalkingRight", false);
         animator.SetBool("isWalkingLeft", false);
         animator.SetBool("ishostile", false);
