@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spieler : MonoBehaviour
 {
-    
+   
+   //Bewegung
     public float Geschwindigkeit = 3f;
-    public float Sprungkraft = 3f;
+    public float Sprungkraft = 12f;
     public Rigidbody2D rigidbody;
     public Animator animator;
 
@@ -26,23 +28,24 @@ public class Spieler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(transform.position);
         animator.SetBool("isWalkingRight", false);
         animator.SetBool("isWalkingLeft", false);
         animator.SetBool("ishostile", false);
         animator.SetBool("isjumping", false);
  
-        if (rigidbody.velocity.y == 0.0f){
+        if (rigidbody.velocity.y == 0.0f)
+        {
             istInDerLuft = false;
-        }
-            
-
-        else{
+        }   
+        else
+        {
             istInDerLuft = true;
         }
             
         
         bewegungsvektor = new Vector2(0,0);
-        if (Input.GetKey("space") && !istInDerLuft)
+        if (Input.GetKey("w") && !istInDerLuft)
         {
           bewegungsvektor = bewegungsvektor + Vector2.up*Sprungkraft;
           animator.SetBool("isjumping", true);
@@ -58,34 +61,54 @@ public class Spieler : MonoBehaviour
         if (Input.GetKey("a"))
         {
            bewegungsvektor = bewegungsvektor + Vector2.left*Geschwindigkeit;
-           animator.SetBool("isWalkingRight", true);
+           animator.SetBool("isWalkingLeft", true);
         }
 
-        if (Input.GetKey("f"))
+        if (Input.GetMouseButtonDown(1))
         {
             animator.SetBool("ishostile", true);
+            Angreifen();
+        }
+
+        if (Input.GetKeyDown("s"))
+        {
+            Blocken();
+        }
+
+        if (Input.GetKeyDown("e"))
+        {
+            Interagieren();
         }
 
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag == "Enemy") {
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        if(other.gameObject.tag == "Enemy") 
+        {
          Destroy(other.gameObject);
 
         }
-
-   
-
-
     }
 
-
-
-
-    void FixedUpdate(){
+    void FixedUpdate()
+    {
         rigidbody.AddForce(bewegungsvektor, ForceMode2D.Impulse);
     }
 
+    void Interagieren()
+    {
+        Debug.Log("Spieler interagiert!");
+    }
 
+    void Blocken()
+    {
+        Debug.Log("Spieler blockt!");
+    }
+    
+    void Angreifen()
+    {
+        Debug.Log("Spieler greift an!");
+    }
 
 }
